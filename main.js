@@ -8,13 +8,12 @@ form.addEventListener("submit", function (e) {
   const mensagemResposta = document.querySelector(".mensagemResposta")
   const MensagemCasoB = `O valor do campo <b>B</b> é maior que o valor do campo <b>A</b>. Formulario Válido e foi enviado corretamente.`
   const MensagemCasoA = `Formulario inválido, tente novamente.`
-  
 
-  if (campoB.value > campoA.value) {
+  if (parseFloat(campoB.value) > parseFloat(campoA.value)) {
     mensagemResposta.innerHTML = MensagemCasoB
     mensagemResposta.style.display = "block"
   } else {
     mensagemResposta.innerHTML = MensagemCasoA
     mensagemResposta.style.display = "block"
-  } 
+  }
 })
